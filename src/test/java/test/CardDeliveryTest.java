@@ -43,7 +43,7 @@ public class CardDeliveryTest {
         $(".calendar-input input").doubleClick().sendKeys(Keys.BACK_SPACE);
         $(".calendar-input input").setValue(secondMeetingDate);
         $(".button").click();
-        $(withText(" Успешно!")).shouldBe(Condition.visible, Duration.ofSeconds(30));
+        $(withText("Успешно!")).shouldBe(Condition.visible, Duration.ofSeconds(30));
         $("[data-test-id=replan-notification]")
                 .shouldHave(Condition.text("У вас уже запланирована встреча на другую дату. Перепланировать?"));
         $(withText("Перепланировать")).click();
